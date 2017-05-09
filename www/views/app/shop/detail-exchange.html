@@ -1,0 +1,47 @@
+<ion-view view-title="{{exchangeById.exchangeform.base}}" class="product-view">
+  <ion-nav-buttons side="secondary">
+    <button class="button button-icon button-clear ion-share"></button>
+  </ion-nav-buttons>
+  <ion-content overflow-scroll="true">
+    <div class="product-card-content">
+      <div class="item item-image">
+        <pre-img ratio="_1_1" helper-class="main-image">
+          <img ng-src="{{exchangeById.user.profileImageURL}}" spinner-on-load>
+        </pre-img>
+      </div>
+      <div class="item item-body">
+        <h2 class="product-title text-center">{{exchangeById.user.displayName}}</h2>
+      </div>
+      <div class="item item-body">
+        <div class="row">
+            <div class="col">From : </div>
+            <div class="col">{{exchangeById.exchangeform.base}}</div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">{{exchangeById.cash | number:2}}</div>
+        </div>
+        <div class="row">
+            <div class="col">To : </div>
+            <div class="col">{{exchangeById.exchangeto.base}}</div>
+        </div>
+        <div class="row">
+            <div class="col">Amount : </div>
+            <div class="col">{{exchangeById.amount | number:2}}</div>
+        </div>
+        <div class="row">
+            <div class="col">location : </div>
+            <div class="col">{{exchangeById.location.name}} {{exchangeById.location.address}}</div>
+        </div>
+        <div class="row">
+            <div class="col">Schedule : </div>
+            <div class="col">{{exchangeById.schedule | date}}</div>
+        </div>
+        <div class="row">
+            <div class="col text-center"><i class="icon ion-ios-telephone-outline" style="font-size: 50px;"></i></div>
+            <div class="col text-center"><i class="icon ion-ios-chatboxes-outline" style="font-size: 50px;"></i></div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

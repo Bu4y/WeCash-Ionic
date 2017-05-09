@@ -1,0 +1,35 @@
+<div class="card-4" ng-controller="PostCardCtrl">
+  <div class="list card">
+    <div class="item item-image">
+      <pre-img ratio="_16_15" helper-class="main-image">
+        <img ng-src="{{post.picture}}" spinner-on-load>
+      </pre-img>
+    </div>
+    <div class="item item-body">
+      <h2 class="card-title">{{post.text}}</h2>
+      <p class="card-description">
+        <a class="card-user-name" ui-sref="app.profile.posts({userId:post.userId})">
+          <span class="card-avatar-image-outer">
+            <pre-img ratio="_1_1" helper-class="avatar-image rounded-image">
+              <img ng-src="{{post.user.picture}}" spinner-on-load>
+            </pre-img>
+          </span>
+          <span class="name-text">{{post.user.name}}</span>
+        </a>
+        <span class="post-likes"> + <b>{{ post.likes }}</b></span>
+      </p>
+    </div>
+    <div class="item item-actions">
+      <button class="action-button icon-left ion-heart button button-small">
+        Like
+      </button>
+      <button class="action-button button button-icon icon ion-android-more-vertical button-small">
+      </button>
+      <button class="right-button action-button button-icon icon ion-share button button-small">
+      </button>
+      <button ng-click="showComments(post)" class="right-button action-button icon-left ion-chatbox button button-small">
+        {{ post.comments }}
+      </button>
+    </div>
+  </div>
+</div>

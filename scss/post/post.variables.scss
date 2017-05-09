@@ -1,0 +1,10 @@
+// Post cards
+$card-4-color: #222222;
+$card-4-bg: #FFFFFF;
+$card-4-highlighted-color: #FFFFFF;
+$card-4-highlighted-bg: #7db80d;
+$card-4-padding: 10px;
+$card-4-main-image-ratio: 16 15;
+
+// Merge maps
+$pre-img-ratios: append($pre-img-ratios, $card-4-main-image-ratio);

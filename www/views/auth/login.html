@@ -1,0 +1,44 @@
+<ion-view class="auth-view" cache-view="false">
+  <ion-nav-bar class="view-navigation">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-title>
+      <span>Log In with Email</span>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+      <a class="button button-clear button-light" ui-sref="app.feed">
+        Skip
+      </a>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="padding">
+    <div class="row related-navigation">
+      <div class="col">
+        <a class="nav-left button button-clear" ui-sref="auth.forgot-password">
+          Forgot Password
+        </a>
+        <a class="nav-right button button-clear" ui-sref="auth.signup">
+          Sign Up
+        </a>
+      </div>
+    </div>
+    <div class="row form-wrapper">
+      <div class="col">
+        <form name="login_form" class="" novalidate>
+          <div class="form-fields-outer list list-inset">
+            <label class="item item-input">
+              <input type="text" placeholder="Username" name="username" ng-model="user.username" required>
+            </label>
+            <label class="item item-input" show-hide-container>
+              <input type="password" placeholder="Password" name="password" ng-model="user.password" required show-hide-input>
+            </label>
+          </div>
+          <button type="submit" class="log-in button button-block" ng-click="doLogIn()" ng-disabled="login_form.$invalid">
+            Log In
+          </button>
+          <p ng-show="error" class="message error">{{error}}</p>
+        </form>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

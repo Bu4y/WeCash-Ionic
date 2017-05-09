@@ -1,0 +1,26 @@
+<ion-modal-view >
+    <ion-header-bar>
+        <h1 class="title">Map</h1>
+        <a class="button button-clear" ng-click="closeMap()"><span class="icon ion-close"></span></a>
+    </ion-header-bar>
+    <ion-content ng-init="initialize();">
+        <div class="item item-input controls">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input id="pac-input" type="text" placeholder="Search Location" data-tap-disabled="true" ng-change='disableTap()' ng-model="search">
+        </div>
+        <div id="map" data-tap-disabled="true"></div>
+    </ion-content>
+</ion-modal-view>
+<!-- <ion-view class="shop-cart-view" view-title="Map" ng-init="initialize()">
+    <ion-header-bar>
+        <h1 class="title">Map</h1>
+        <a class="button button-clear" ng-click="closeMap()"><span class="icon ion-checkmark-round"></span></a>
+    </ion-header-bar>
+    <ion-content>
+        <div class="item item-input controls">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input id="pac-input" type="text" placeholder="Search Location" data-tap-disabled="true" ng-change='disableTap()' ng-model="search">
+        </div>
+        <div id="map" data-tap-disabled="true"></div>
+    </ion-content>
+</ion-view> -->

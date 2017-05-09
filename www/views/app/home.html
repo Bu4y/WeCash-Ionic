@@ -1,0 +1,15 @@
+<ion-view view-title="Home" class="shop-view">
+  <ion-tabs class="tabs-icon-top tabs-striped tabs-background-balanced tabs-color-light shop-tabs">
+    <ion-tab title="Home" icon-on="ion-ios-home" icon-off="ion-ios-home-outline" ui-sref="app.home.list">
+      <ion-nav-view name="home-list"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="New Post" icon-on="ion-ios-plus" icon-off="ion-ios-plus-outline" ng-click="showList()">
+      <ion-nav-view name="home-post"></ion-nav-view>
+    </ion-tab>
+     <ion-floating-menu ng-click="showList()">
+    </ion-floating-menu> 
+    <ion-tab title="Rate" icon-on="ion-ios-pulse-strong" icon-off="ion-ios-pulse" ui-sref="app.home.rate">
+      <ion-nav-view name="home-rate"></ion-nav-view>
+    </ion-tab>
+  </ion-tabs>
+</ion-view>

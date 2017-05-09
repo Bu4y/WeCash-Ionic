@@ -1,0 +1,26 @@
+<ion-view view-title="Exchange Rate" class="shop-popular-view">
+  <ion-content>
+<ion-refresher on-refresh="doRefresh()"></ion-refresher>
+  <div class="list">
+<div class="row">
+  <div class="col col-60">Currency</div>
+  <div class="col col-40">Value</div>
+</div>
+<div class="row item" ng-repeat="ex in exchangesRate">
+  <div class="col-10">
+    <div class="currency-flag currency-flag-{{ex.currency | lowercase}}" style="margin-top:10px"></div>
+  </div>
+  <div class="col">
+    <div class="row">
+      <div class="col">{{ex.currency}}</div>
+    </div>
+    <div class="row">
+      <small>{{ex.desc.name}}</small>
+    </div>
+  </div>
+  <div class="col col-40">{{ex.value | number:'4'}}</div>
+</div>
+
+</div>
+  </ion-content>
+</ion-view>

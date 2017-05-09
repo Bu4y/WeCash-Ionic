@@ -1,0 +1,61 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header">
+  <h1 class="title">Add</h1>
+  <a class="button button-clear" ng-click="closeList()"><span class="icon ion-close"></span></a>
+ </ion-header-bar>
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-select">
+    <div class="input-label" >
+      From
+    </div>
+    <select ng-model="dataExchange.currency_from" ng-options="key as key for (key ,ex) in currencys" ng-change="getLate()">
+      
+    </select>
+  </label>
+
+      <label class="item item-input">
+    <span class="input-label"></span>
+    <input type="number" ng-model="dataExchange.amount_from" ng-change="getamount()">
+  </label>
+
+      <label class="item item-input item-select">
+    <div class="input-label" >
+      To
+    </div>
+    <select ng-model="dataExchange.currency_to1" ng-options="ex as ex.currency for ex in exchangeto" ng-change="getamount(dataExchange.currency_to1)"></select>
+  </label>
+
+      <label class="item item-input">
+    <span class="input-label">Amount</span>
+    <!-- <input type="number"  ng-model="dataExchange.amount_to"> -->
+    <label>{{dataExchange.amount_to | number : 2}}</label>
+  </label>
+
+      <label class="item item-input" ng-click="gotoMap()">
+                <div class="input-label">
+                    Location
+                </div>
+                <div class="item-text-wrap div-warp">
+                    <p>{{place.name}}</p>
+                    <p>{{place.formatted_address}}</p>
+                </div>
+            </label>
+
+      <label class="item item-input">
+    <span class="input-label">Schedule</span>
+    <input type="date"  ng-model="dataExchange.schedule">
+  </label>
+    </div>
+  </ion-content>
+
+  <div class="bar bar-footer footer-bottom">
+  <div class="row menu-bottom-options">
+   <div class="col col-bottom">
+    <button class="button button-full button-success button-text" ng-click="post()">Submit</button>
+   </div>
+   <div class="col col-bottom">
+    <button class="button button-full button-danger button-text" ng-click="closeList()">Cancel</button>
+   </div>
+  </div>
+</ion-modal-view>

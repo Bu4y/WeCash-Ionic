@@ -1,0 +1,14 @@
+{
+  "name": "ionTheme-2",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "default",
+    "watch",
+    "templatecache"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "documentRoot": "www"
+}

@@ -1,0 +1,138 @@
+.welcome-view
+{
+	.top-content
+  {
+    height: 40%;
+
+		.app-copy
+		{
+			text-align: center;
+			padding-top: 10vh;
+		}
+
+		.app-logo
+		{
+			font-size: 50px;
+			font-family: cursive;
+			font-weight: 600;
+			font-style: italic;
+			color: $welcome-color;
+		}
+	}
+
+	.bottom-content
+  {
+    height: 60%;
+
+		.google-sign-in,
+		.facebook-sign-in,
+		.twitter-sign-in
+		{
+			color: $auth-social-btn-color;
+			font-size: 18px;
+  		font-weight: 500;
+
+			&:before
+			{
+				width: $auth-social-btn-icon-width;
+				text-align: center;
+				font-size: 32px;
+			}
+
+			.btn-copy
+			{
+				margin-left: -($auth-social-btn-icon-width);
+			}
+		}
+
+		.google-sign-in
+		{
+			background-color: $google-red;
+			border-color: rgba(darken($google-red, 2), .9);
+		}
+
+		.facebook-sign-in
+		{
+			background-color: $facebook-blue;
+			border-color: rgba(darken($facebook-blue, 2), .9);
+		}
+
+		.twitter-sign-in
+		{
+			background-color: $twitter-blue;
+			border-color: rgba(darken($twitter-blue, 2), .9);
+		}
+
+		.split-actions
+		{
+			padding: 0px;
+
+			.col
+			{
+				padding-top: 0px;
+				padding-bottom: 0px;
+
+				&:first-child
+				{
+					padding-left: 0px;
+				}
+
+				&:last-child
+				{
+					padding-right: 0px;
+				}
+			}
+
+			.button-outline
+			{
+				color: $welcome-color;
+				border-color: $welcome-color;
+				font-weight: 500;
+			}
+		}
+
+		.other-options-outer
+		{
+			// Fix tabs animation on iOS
+			// Fix initial blink before angular loaded: http://stackoverflow.com/a/14076004/1116959
+			[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
+			{
+				display: none !important;
+			}
+			
+			// Fix animation (weird slide up/down effect)
+			.other-options.ng-hide,
+			.hidden-actions.ng-hide
+			{
+				display: none !important;
+			}
+
+			.other-options.ng-hide-add.ng-hide-add-active,
+			.other-options.ng-hide-remove.ng-hide-remove-active
+			.hidden-actions.ng-hide-add.ng-hide-add-active,
+			.hidden-actions.ng-hide-remove.ng-hide-remove-active
+			{
+				@include transition(all 0s ease);
+			}
+
+			.other-options
+			{
+				color: $welcome-color;
+			}
+		}
+
+		.legal-notice
+		{
+			color: $welcome-color;
+			margin: 10px 0px;
+			text-align: center;
+
+			a
+			{
+				text-decoration: none;
+				font-weight: 600;
+				color: $welcome-color;
+			}
+		}
+	}
+}

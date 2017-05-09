@@ -1,0 +1,133 @@
+.auth-outer
+{
+	background-color: transparent !important;
+
+	ion-view
+	{
+		background-color: transparent;
+		box-shadow: none !important; // Need to set this with important to prevent awefull vertical line when transitioning
+	}
+
+	ion-header-bar
+	{
+		background-color: transparent !important;
+		border: none !important;
+		background-size: 0px !important; // To remove bottom border on header
+
+		*
+		{
+			color: $auth-color;
+		}
+	}
+}
+
+.auth-view
+{
+	// Related navigation
+	.related-navigation
+	{
+		padding-top: 0px;
+		padding-bottom: 0px;
+
+		.col
+		{
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+
+		.nav-right
+		{
+			float: right;
+		}
+
+		.nav-left
+		{
+			float: left;
+		}
+	}
+
+	// Related copy
+	.related-copy
+	{
+		@include headings()
+		{
+	    color: $auth-color;
+			text-align: center;
+		}
+	}
+
+	// Form
+	.form-wrapper
+	{
+		.sign-up.button,
+		.log-in.button
+		{
+			background-color: $auth-btn-bg;
+			color: $auth-btn-color;
+			border-color: darken($auth-btn-bg, 2);
+			font-weight: 500;
+		}
+
+		input
+    {
+      @include _placeholder {
+        color: darken($auth-color, 30%);
+      }
+    }
+	}
+
+  .form-fields-outer
+	{
+		margin: 0px;
+		padding: 0px 16px;
+
+		.item-input
+		{
+			padding-left: 0px;
+			padding-right: 0px;
+			border-left: none;
+			border-right: none;
+		}
+	}
+
+	// Misc
+	.message
+  {
+    text-align: center;
+    color: lighten($auth-color, 30%);
+  }
+
+  .message.error:before
+  {
+    content: '*';
+    color: $error-color;
+    text-shadow: 1px 1px 0px rgba(darken($error-color, 20), .3);
+    margin-right: 5px;
+    font-size: 20px;
+  }
+
+	// Show/Hide password
+  .show-hide-input
+  {
+    display: inherit;
+    width: 100%;
+  }
+  .toggle-view-anchor
+  {
+    position:absolute;
+    top:6px;
+    right:0px;
+    height: $line-height-computed + $font-size-base;
+    line-height: $line-height-computed + $font-size-base;
+
+    *
+    {
+      color: darken($auth-color, 20%) !important;
+      display: block;
+      font-size: 24px;
+      width: 45px;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+}

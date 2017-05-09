@@ -1,0 +1,34 @@
+<div class="comments-list">
+	<div class="people-comment row" ng-repeat="comment in current_post.comments_list">
+		<div class="col col-top col-20">
+			<!-- We need a wrapper with width set for the preload image directive -->
+			<div class="user-image-outer">
+				<a ng-click="navigateToUserProfile(comment.user)">
+					<pre-img ratio="_1_1" helper-class="rounded-image">
+						<img class="user-image" ng-src="{{ comment.user.picture }}" spinner-on-load>
+					</pre-img>
+				</a>
+			</div>
+		</div>
+		<div class="col col-top">
+			<div class="row user-data">
+				<div class="col">
+					<a class="name" ng-click="navigateToUserProfile(comment.user)">{{ comment.user.name }}</a>
+					<p class="comment">{{ comment.text }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="new-comment-outer row row-center">
+	<div class="col">
+		<div class="item item-input-inset">
+	    <label class="item-input-wrapper">
+	      <input type="text" placeholder="Write a comment">
+	    </label>
+	    <button class="send-comment-button button button-small">
+	      Send
+	    </button>
+	  </div>
+	</div>
+</div>

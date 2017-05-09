@@ -1,0 +1,124 @@
+.post-card-outer
+{
+  .card-4
+	{
+		.card
+		{
+			margin: 0px 0px ($card-4-padding * 1.5);
+			border-radius: 0px;
+			box-shadow: 0px 1px 1px rgba(lighten($card-4-color, 40%), .3);
+
+			.item
+			{
+				&:first-child,
+				&:last-child
+				{
+					border-radius: 0px;
+				}
+
+				&.item-body
+				{
+					padding: $card-4-padding;
+					border-bottom: none;
+				}
+
+				&.item-actions
+				{
+					margin: $card-4-padding;
+					margin-top: 0px;
+					padding: 0px;
+					border-top: none;
+					margin-top: 0px;
+					overflow: hidden;
+				}
+			}
+		}
+
+		.card-title
+		{
+			margin: 0px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+
+		.card-description
+		{
+			color: lighten($card-4-color, 45%);
+			font-size: 15px;
+			margin: 5px 0px 0px;
+
+      .card-user-name
+      {
+        text-decoration: none;
+        color: lighten($card-4-color, 45%);
+
+        .name-text
+        {
+          display: inline-block;
+          height: 25px;
+          line-height: 25px;
+          float:left;
+          margin-right: 5px;
+        }
+      }
+
+      .post-likes
+      {
+        display: inline-block;
+        height: 25px;
+        line-height: 25px;
+      }
+		}
+
+    .card-avatar-image-outer
+    {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      float:left;
+      margin-right: 5px;
+
+      img
+      {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+		.action-button
+		{
+			padding: 0px 5px;
+			height: 25px;
+  		min-height: 0px;
+			min-width: 34px;
+		  font-size: 11px;
+		  line-height: 22px;
+		  font-weight: 600;
+			background-color: $card-4-bg;
+			border-color: rgba(darken($card-4-bg, 20%), .7);
+			color: lighten($card-4-color, 30%);
+
+			&.right-button
+			{
+				float: right;
+				margin-left: 4px;
+			}
+
+			&.button-icon
+			{
+				&::before
+				{
+					font-size: 22px;
+				}
+			}
+
+			&.highlighted-button
+			{
+				border-color: darken($card-4-highlighted-bg, 4%);
+			  background-color: $card-4-highlighted-bg;
+			  color: $card-4-highlighted-color;
+			}
+		}
+	}
+}

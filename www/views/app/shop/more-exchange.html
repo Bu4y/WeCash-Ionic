@@ -1,0 +1,30 @@
+<ion-view view-title="More Exchange" class="shop-popular-view">
+    <ion-content>
+        <div class="row shop-products-narrow-cards-outer">
+            <div ng-repeat="ex in listExchanges | filter:{ exchangeform: { base : filterCate } }" class="col col-50 shop-product-narrow-card" ui-sref="app.exchange-detail({exchangeId: ex._id})">
+                <div class="list card">
+                    <div class="item item-body">
+                        <div class="row">
+                            <div class="col">
+                                <pre-img ratio="_2_1" helper-class="shop-home-option-image-outer">
+                                    <img class="img-macth" ng-src="{{ex.user.profileImageURL}}" spinner-on-load>
+                                </pre-img>
+                            </div>
+                            <div class="col text-left">
+                                <p class="des"><b>{{ex.exchangeform.base}}</b> </p>
+                                <p class="des">{{ex.cash | number:2}}</p>
+                                <p class="des"><b>{{ex.exchangeto.base}}</b></p>
+                                <p class="des">{{ex.amount | number:2}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-body">
+                        <h2 class="card-title text-center">{{ex.user.displayName}}</h2>
+                        <p class="card-description"><b>{{ex.lacation.des}}</b>
+                            <p class="card-description"><b>35.1 km</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

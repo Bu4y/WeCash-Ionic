@@ -1,0 +1,63 @@
+<ion-view view-title="Exchange" class="shop-home-view">
+    <ion-content>
+        <div class="list shop-home-options-list">
+            <a class="item shop-home-option-item">
+                <div class="row">
+                    <div class="col">
+                        <pre-img ratio="_2_1" helper-class="shop-home-option-image-outer">
+                            <!-- <img ng-src="http://lorempixel.com/300/150" spinner-on-load> -->
+                            <img ng-src="img/sale.png" spinner-on-load>
+                        </pre-img>
+                    </div>
+                </div>
+                <div class="row option-copy">
+                    <div class="col col-75">
+                        <span>Shop Now</span>
+                    </div>
+                    <div class="col col-25 option-icon">
+                        <i class="icon ion-chevron-right"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div ng-repeat="cate in cates" ng-disbled="true">
+            <div class="item item-divider shop-section-title">
+                <span class="title-copy">{{cate.name}}</span>
+                <a class="button button-small button-dark section-action" ui-sref="app.exchange-more({cate: cate.name})">More</a>
+            </div>
+            <ion-scroll direction="x" class="wide-as-needed" scroll="true" overflow-scroll="{{scroll === true ? 'true': scroll === false ? 'false' : 'true'}}">
+                <div class="row shop-products-narrow-cards-outer shop-product-cards-scroller" style="width: 500px;">
+                    <div ng-repeat="ex in listExchanges | filter:{ exchangeform: { base : cate.name } } | limitTo : 5" class="col col-50 shop-product-narrow-card"
+                        ui-sref="app.exchange-detail({exchangeId: ex._id})">
+                        <div class="list card">
+                            <div class="item item-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <pre-img ratio="_2_1" helper-class="shop-home-option-image-outer">
+                                            <img class="img-macth" ng-src="{{ex.user.profileImageURL}}" spinner-on-load>
+                                        </pre-img>
+                                    </div>
+                                    <div class="col text-left">
+                                        <p class="des"><b>{{ex.exchangeform.base}}</b> </p>
+                                        <p class="des">{{ex.cash | number:2}}</p>
+                                        <p class="des"><b>{{ex.exchangeto.base}}</b></p>
+                                        <p class="des">{{ex.amount | number:2}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item item-body">
+                                <h2 class="card-title text-center">{{ex.user.displayName}}</h2>
+                                <p class="card-description"><b>{{ex.lacation.des}}</b>
+                                    <p class="card-description"><b>35.1 km</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ion-scroll>
+        </div>
+
+        <button class="button button-block button-positive">
+  open modal
+</button>
+    </ion-content>
+</ion-view>

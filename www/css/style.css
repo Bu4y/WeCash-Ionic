@@ -1,0 +1,86 @@
+.bar-footer.footer-buttons {
+    margin: 10px;
+    padding: 0px;
+}
+
+.bar-footer.footer-buttons .row {
+    padding: 0px;
+}
+
+.bar-footer.footer-buttons .row .col {
+    text-align: center;
+}
+
+
+/*map*/
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.controls {
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    position: absolute;
+    line-height: 22px;
+}
+
+#pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 90%;
+    margin-bottom: 0;
+    line-height: 15px;
+    font-weight: bold;
+    margin-left: 10%;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+
+.pac-container {
+    font-family: Roboto;
+}
+
+#type-selector {
+    color: #fff;
+    background-color: #4d90fe;
+    padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+
+/*map*/
+
+.div-warp {
+    padding-right: 40px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.img-macth {
+    width: 50px;
+}
+
+.des {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.div-scroll {
+    margin-top: 30px;
+}

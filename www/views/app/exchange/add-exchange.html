@@ -1,0 +1,51 @@
+<ion-view view-title="Create">
+    <ion-content>
+        <div class="list">
+            <label class="item item-input item-select">
+          <div class="input-label">
+            From
+          </div>
+          <select ng-model="data.from" ng-options="exchange as exchange.type for exchange in exchanges track by exchange.type"></select>
+        </label>
+            <label class="item item-input">
+          <div class="input-label">
+            Cash
+          </div>  
+            <input type="number" placeholder="Cash" ng-model="data.cash">
+        </label>
+            <label class="item item-input item-select">
+          <div class="input-label">
+            To
+          </div>
+          <select ng-model="data.to" ng-options="exchange as exchange.type for exchange in exchanges track by exchange.type"></select>
+        </label>
+            <label class="item item-input">
+          <div class="input-label">
+            Amount
+          </div>  
+            <input type="number" placeholder="Amount" ng-model="data.amount">
+        </label>
+            <label class="item item-input item-select">
+          <div class="input-label">
+            location
+          </div>
+          <select ng-model="data.location" ng-options="location as location.name for location in locations track by location.name"></select>
+        </label>
+            <label class="item item-input">
+          <div class="input-label">
+            Schedule
+          </div>  
+            <input type="date" ng-model="data.schedule">
+        </label>
+            <div class="row">
+                <div class="col"><button class="button button-block button-positive" ng-click="create()">
+  Submit
+</button></div>
+                <div class="col"><button class="button button-block button-assertive" ng-click="cancel()">
+  Cancel
+</button></div>
+            </div>
+            
+        </div>
+    </ion-content>
+</ion-view>

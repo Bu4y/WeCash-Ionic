@@ -1,0 +1,104 @@
+.comments-list
+{
+	padding-bottom: $new-comment-height - $popup-padding;
+
+	.people-comment
+	{
+		padding: 0px;
+		margin-bottom: 15px;
+
+		&:last-child
+		{
+			margin-bottom: 5px;
+		}
+
+		& > .col:first-child
+		{
+			padding-left: 0px;
+		}
+
+		.user-image-outer
+	  {
+	    .user-image
+	    {
+	      width: 100%;
+	    }
+
+	    .rounded-image .user-image
+	    {
+	      border-radius: 50%;
+	    }
+	  }
+
+		.user-data
+		{
+			padding: 0px;
+
+			.col
+			{
+				padding: 0px;
+			}
+
+			.name
+			{
+				display: block;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 500;
+        text-decoration: none;
+			}
+
+			.comment
+			{
+				display: block;
+				margin: 0px;
+				font-size: 12px;
+  			line-height: 16px;
+			}
+		}
+	}
+}
+
+.new-comment-outer
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: $popup-bg;
+	border-radius: 0px 0px 4px 4px;
+	height: $new-comment-height;
+	padding: $popup-padding;
+	border-top: 1px solid #ddd;
+
+	& > .col
+	{
+		padding: 0px;
+	}
+
+	.item-input-wrapper
+	{
+		border-radius: 2px;
+		height: 34px;
+	}
+
+	.item-input-inset
+	{
+		padding: 0px;
+	  border: none;
+	  background: transparent;
+	  margin: 0px;
+	}
+
+	.send-comment-button
+	{
+		height: 34px;
+	}
+
+	input
+	{
+		@include _placeholder {
+			color: lighten($popup-color, 30%);
+		}
+	}
+}
